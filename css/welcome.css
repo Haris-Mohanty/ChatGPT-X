@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sumbit-btn .btn{
+    color: #fff !important;
+    background-color: #12ac83 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+.Audiowide{
+    font-family: "Audiowide", sans-serif;
+}

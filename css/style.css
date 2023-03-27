@@ -2,4 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.top-header{
+    background-color: #576457;
+}
+.top-header a{
+    color: #E15CDF;
+    
 }

@@ -7,6 +7,24 @@
 .top-header{
     background-color: #576457;
 }
-.top-header a{
+a{
+    color: #E15CDF !important;
+}
+img{
+    background-color: #f1ecf1;
+}
+.container-box{
+    background-color: #193718;
     color: #E15CDF;
+}
+.container-box h1{
+    font-weight: bold;
+}
+.btn{
+    width: 150px !important;
+    padding: 13px 8px !important;
+    background-color: #E15CDF;
+    border: none !important;
+    box-shadow: none;
+
 }

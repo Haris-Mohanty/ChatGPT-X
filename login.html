@@ -34,17 +34,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
     <!--   GOOGLE FONT END -->
     <title>Login</title>
+    <style>
+        .login-btn{
+            width: 100%;
+            color: #fff;
+            background-color: #12ac83;
+            box-shadow: none;
+            border: none;
+            padding: 8px;
+            font-size: 18px;
+            border-radius: 5px;
+            font-family: 'Audiowide', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid" style="font-family: 'Roboto', sans-serif;">
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex flex-column">
                 <div align="center" class="mt-5">
                     <img src="Images/1600px-OpenAI_logo.png" width="110" alt="">
                     <h2 class="text-center mt-2">Welcome Back</h2>
                     <form>
-                        
+                        <input type="text" name="" id="" placeholder="Email Address" class="form-control mb-3">
+                        <input type="password" name="" placeholder="Password" id="" class="form-control mb-3">
+                        <button class="login-btn">Login</button>
                     </form>
                 </div>
             </div>

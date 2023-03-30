@@ -2,9 +2,11 @@ $(document).ready(function () {
   $(".signup-form").submit(function (e) {
     e.preventDefault();
     if ($(".email").val() != "" && $(".password").val() != "") {
-
-    }else{
+      $.ajax({
         
+      });
+    } else {
+      swal("Empty Field!", "Please fill all the Input field!", "warning");
     }
   });
 });

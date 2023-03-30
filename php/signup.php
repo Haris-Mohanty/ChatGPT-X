@@ -21,6 +21,12 @@ if($response){
         status VARCHAR(15) NOT NULL DEFAULT 'PENDING',
         PRIMARY KEY(id)
     )"
+
+    if($db -> query($create_table)){
+        $insert_data = "INSERT INTO signup() VALUES ()";
+    }else{
+        echo "Unable to Create table!";
+    }
 }
 
 ?>

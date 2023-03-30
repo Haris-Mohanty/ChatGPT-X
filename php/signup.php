@@ -23,7 +23,13 @@ if($response){
     )"
 
     if($db -> query($create_table)){
-        $insert_data = "INSERT INTO signup() VALUES ()";
+        $insert_data = "INSERT INTO signup(email, password, otp) VALUES ('$email', '$password', '$otp')";
+
+        if($db -> query($insert_data)){
+
+        }else{
+            echo "";
+        }
     }else{
         echo "Unable to Create table!";
     }

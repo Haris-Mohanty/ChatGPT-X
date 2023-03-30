@@ -14,7 +14,12 @@ if($response){
     echo "S";
 }else{
     $create_table = "CREATE TABLE signup(
-        id INT() NOT NULL AUTO_INCREMENT,
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        email VARCHAR(55),
+        password VARCHAR(55),
+        otp VARCHAR(11),
+        status VARCHAR(15) NOT NULL DEFAULT 'PENDING',
+        PRIMARY KEY(id)
     )"
 }
 

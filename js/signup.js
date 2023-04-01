@@ -37,7 +37,19 @@ $(document).ready(function () {
                 },
                 success: function (response) {
                   if(response.trim() == "success"){
+                    $(".verify-btn").html("Verify");
+                    $(".verify-btn").removeClass("disabled");
+                    //
+                    $(".signup-form").removeClass("d-none");
+                    $(".otp").addClass("d-none");
+                    $(".verify-btn").addClass("d-none");
+                    swal("Verified Successfully!", "You can Login now!", "success");
                     
+                    
+                  }else{
+                    $(".verify-btn").html("Verify");
+                    $(".verify-btn").removeClass("disabled");
+                    swal(response.trim(), "Please Enter the Correct OTP!", "error");
                   }
                 },
               });

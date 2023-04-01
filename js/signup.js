@@ -21,6 +21,8 @@ $(document).ready(function () {
               $(".signup-form").addClass("d-none");
               $(".otp").removeClass("d-none");
               $(".verify-btn").removeClass("d-none");
+              //verify
+              $(".verify-btn").
             }else{
               swal(response.trim(), response.trim(), "error");
             }

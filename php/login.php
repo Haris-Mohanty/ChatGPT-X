@@ -15,6 +15,7 @@ if($response -> num_rows != 0){
     $pass_res = $db -> query($check_pass);
     if($pass_res -> num_rows != 0){
 
+        $check_status = "SELECT status FROM signup WHERE email = '$email' AND status = 'ACTIVE'";
         
 
     }else{

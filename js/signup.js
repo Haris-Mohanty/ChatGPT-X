@@ -10,22 +10,27 @@ $(document).ready(function () {
           password: $(".password").val(),
         },
         cache: false,
-        beforeSend : function(){
+        beforeSend: function () {
           $(".signup-btn").html("Please wait.....");
           $(".signup-btn").addClass("disabled");
         },
         success: function (response) {
           $(".signup-btn").html("Signup");
           $(".signup-btn").removeClass("disabled");
-            if(response.trim() == "success"){
-              $(".signup-form").addClass("d-none");
-              $(".otp").removeClass("d-none");
-              $(".verify-btn").removeClass("d-none");
-              //verify
-              $(".verify-btn").
-            }else{
-              swal(response.trim(), response.trim(), "error");
-            }
+          if (response.trim() == "success") {
+            $(".signup-form").addClass("d-none");
+            $(".otp").removeClass("d-none");
+            $(".verify-btn").removeClass("d-none");
+            //verify
+            $(".verify-btn").click(function () {
+              $.ajax({
+                type : "POST",
+                url : "php/verify.php"
+              });
+            });
+          } else {
+            swal(response.trim(), response.trim(), "error");
+          }
         },
       });
     } else {

@@ -15,6 +15,8 @@ $(document).ready(function () {
           $(".signup-btn").addClass("disabled");
         },
         success: function (response) {
+          $(".signup-btn").html("Signup");
+          $(".signup-btn").removeClass("disabled");
             alert(response);
         },
       });

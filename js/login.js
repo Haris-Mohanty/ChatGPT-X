@@ -13,7 +13,13 @@ $(document).ready(function () {
     },
     success: function (response) {
           $(".btn-login").html("Login");
-        
+        if(response.trim() == "Status Pending"){
+            $(".login-form").addClass("d-none");
+            $(".verify-btn").removeClass("d-none");
+            $(".otp").removeClass("d-none");
+        }else{
+            swal();
+        }
       },
     });
   });

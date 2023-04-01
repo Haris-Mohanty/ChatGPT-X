@@ -12,7 +12,7 @@ $(document).ready(function () {
         $(".btn-login").html("Please wait...");
       },
       success: function (response) {
-        alert(response);
+        
       },
     });
   });

@@ -1,6 +1,7 @@
 $(document).ready(function () {
   $(".signup-form").submit(function (e) {
     e.preventDefault();
+    let email = $(".email").val();
     if ($(".email").val() != "" && $(".password").val() != "") {
       $.ajax({
         type: "POST",
@@ -24,8 +25,19 @@ $(document).ready(function () {
             //verify
             $(".verify-btn").click(function () {
               $.ajax({
-                type : "POST",
-                url : "php/verify.php"
+                type: "POST",
+                url: "php/verify.php",
+                data: {
+                  email: email,
+                  otp: $(".otp").val(),
+                },
+                beforeSend: function () {
+                  $(".verify-btn").html("Please wait...");
+                  $(".verify-btn").addClass("disabled");
+                },
+                success: function (response) {
+                  alert(response);
+                },
               });
             });
           } else {

@@ -34,7 +34,7 @@ $(document).ready(function () {
               success: function (response) {
                 if(response.trim() == "success"){
                     $(".verify-btn").html("Verify");
-                    window.location = "https://google.com";
+                    window.location = "user.html";
                 }else{
                     swal(response.trim(), "Please Enter the Correct OTP!", "error");
                 }
@@ -42,7 +42,7 @@ $(document).ready(function () {
             });
           });
         } else if (response.trim() == "Login Success") {
-          window.location = "https://google.com";
+          window.location = "user.html";
         } else {
           swal(response.trim(), response.trim(), "error");
         }

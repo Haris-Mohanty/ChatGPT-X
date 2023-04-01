@@ -32,7 +32,12 @@ $(document).ready(function () {
                 $(".verify-btn").html("Please wait....");
               },
               success: function (response) {
-                alert(response);
+                if(response.trim() == "success"){
+                    $(".verify-btn").html("Verify");
+                    window.location = "https://google.com";
+                }else{
+                    swal(response.trim(), "Please Enter the Correct OTP!", "error");
+                }
               },
             });
           });

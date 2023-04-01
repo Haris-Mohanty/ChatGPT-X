@@ -44,7 +44,7 @@ $(document).ready(function () {
                     $(".otp").addClass("d-none");
                     $(".verify-btn").addClass("d-none");
                     swal("Verified Successfully!", "You can Login now!", "success");
-                    
+                    $(".signup-form")[0].reset();
                     
                   }else{
                     $(".verify-btn").html("Verify");

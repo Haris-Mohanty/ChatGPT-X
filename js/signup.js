@@ -36,7 +36,9 @@ $(document).ready(function () {
                   $(".verify-btn").addClass("disabled");
                 },
                 success: function (response) {
-                  alert(response);
+                  if(response.trim() == "success"){
+                    
+                  }
                 },
               });
             });

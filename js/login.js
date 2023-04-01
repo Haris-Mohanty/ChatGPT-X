@@ -17,8 +17,10 @@ $(document).ready(function () {
             $(".login-form").addClass("d-none");
             $(".verify-btn").removeClass("d-none");
             $(".otp").removeClass("d-none");
+        }else if(response.trim() == "Login Success"){
+            window.location = "https://google.com";
         }else{
-            swal();
+            swal(response.trim(), response.trim(), "error");
         }
       },
     });

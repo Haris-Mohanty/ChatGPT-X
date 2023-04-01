@@ -10,6 +10,10 @@ $(document).ready(function () {
           password: $(".password").val(),
         },
         cache: false,
+        beforeSend : function(){
+          $(".signup-btn").html("Please wait.....");
+          $(".signup-btn").addClass("disabled");
+        },
         success: function (response) {
             alert(response);
         },

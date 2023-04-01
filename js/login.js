@@ -10,17 +10,19 @@ $(document).ready(function () {
       },
       beforeSend: function () {
         $(".btn-login").html("Please wait...");
-    },
-    success: function (response) {
-          $(".btn-login").html("Login");
-        if(response.trim() == "Status Pending"){
-            $(".login-form").addClass("d-none");
-            $(".verify-btn").removeClass("d-none");
-            $(".otp").removeClass("d-none");
-        }else if(response.trim() == "Login Success"){
-            window.location = "https://google.com";
-        }else{
-            swal(response.trim(), response.trim(), "error");
+      },
+      success: function (response) {
+        $(".btn-login").html("Login");
+        if (response.trim() == "Status Pending") {
+          $(".login-form").addClass("d-none");
+          $(".verify-btn").removeClass("d-none");
+          $(".otp").removeClass("d-none");
+          //ajax
+          $.ajax({});
+        } else if (response.trim() == "Login Success") {
+          window.location = "https://google.com";
+        } else {
+          swal(response.trim(), response.trim(), "error");
         }
       },
     });

@@ -17,7 +17,13 @@ $(document).ready(function () {
         success: function (response) {
           $(".signup-btn").html("Signup");
           $(".signup-btn").removeClass("disabled");
-            alert(response);
+            if(response.trim() == "success"){
+              $(".signup-form").addClass("d-none");
+              $(".otp").removeClass("d-none");
+              $(".verify-btn").removeClass("d-none");
+            }else{
+              swal(response.trim(), response.trim(), "error");
+            }
         },
       });
     } else {

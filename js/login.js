@@ -10,8 +10,9 @@ $(document).ready(function () {
       },
       beforeSend: function () {
         $(".btn-login").html("Please wait...");
-      },
-      success: function (response) {
+    },
+    success: function (response) {
+          $(".btn-login").html("Login");
         
       },
     });

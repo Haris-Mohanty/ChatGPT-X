@@ -18,6 +18,7 @@ body{
 .right-box{
     width: 83%;
     margin-left: 17%;
+    margin-top: 40px;
 }
 .right-box i{
     font-size: 27px;
@@ -36,4 +37,14 @@ body{
 }
 .right-box .ex-box:hover{
     background-color: #d9d9e3;
+}
+.right-box .icon-area i{
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    cursor: pointer;
+}
+small{
+    text-align: center;
+    font-size: 12px;
 }

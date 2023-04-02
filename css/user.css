@@ -3,3 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+.left-box{
+    width: 17%;
+    background-color: #202123;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 15px 7px;
+}

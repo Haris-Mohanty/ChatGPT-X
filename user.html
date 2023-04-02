@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- BOOTSTRAP CSS LINK START -->
     <link rel="stylesheet" href="common/css/bootstrap.min.css" />
     <!-- BOOTSTRAP CSS LINK END -->
-    
+
     <!-- BOOTSTRAP JS LINK START -->
     <script src="common/js/bootstrap.bundle.min.js"></script>
     <!-- BOOTSTRAP JS LINK END -->
@@ -31,21 +31,31 @@
     <!--   GOOGLE FONT START -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"rel="stylesheet"/>
 
-    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/user.css" />
     <title>ChatGPT</title>
-</head>
-<body>
-    <div class="left-box">
-        <div>
-            <ul class="list-group">
-                <li class="list-group-item bg-transparent text-white mb-2" style="border: 0.6px solid #777575 !important; cursor: pointer;"><i class="fa fa-plus"></i> New Chat</li>
-            </ul>
-        </div>
+  </head>
+  <body>
+    <div class="left-box d-flex justify-content-between flex-column">
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item bg-transparent text-white" style="border: 0.6px solid #777575 !important; cursor: pointer">
+            <i class="fa fa-plus"></i> New Chat
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item bg-transparent text-white mb-2" style="cursor: pointer">
+            <i class="fa-solid fa-trash-can"></i> Clear Conversations
+          </li>
+          <li class="list-group-item bg-transparent text-white mb-2" style="cursor: pointer">
+            <i class="fa-regular fa-moon"></i> Dark Mood
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="right-box"></div>
-
-
-</body>
+  </body>
 </html>

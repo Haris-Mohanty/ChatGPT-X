@@ -3,7 +3,16 @@ $(document).ready(function () {
     e.preventDefault();
     //ajax request
     $.ajax({
-        
+      type: "POST",
+      url: "php/dashboard.php",
+      data: new FormData(this),
+      processData: false,
+      contentType: false,
+      cache: false,
+      beforeSend: function () {},
+      success: function (response) {
+        alert(response);
+      },
     });
   });
 });

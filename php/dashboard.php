@@ -16,11 +16,13 @@ if($response){
     $create_table = "CREATE TABLE dashboard(
         id INT(11) NOT NULL AUTO_INCREMENT,
         question VARCHAR(255),
-        answer VARCHAR(255),
+        answer MEDIUMTEXT,
         PRIMARY KEY(id)
     )";
 
     if($db -> $($create_table)){
+
+        $insert_data = "INSERT INTO dashboard(question, answer) VALUES ('', '$answer')";
 
     }else{
         echo "Unable to Create Table!";

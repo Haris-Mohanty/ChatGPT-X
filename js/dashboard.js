@@ -5,7 +5,10 @@ $(document).ready(function () {
     $.ajax({
       type: "POST",
       url: "php/dashboard.php",
-      data: new FormData(this),
+      data: {
+        question: $(".question").val().toLowerCase(),
+        answer: $(".answer").val(),
+      },
       processData: false,
       contentType: false,
       cache: false,

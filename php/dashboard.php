@@ -20,9 +20,15 @@ if($response){
         PRIMARY KEY(id)
     )";
 
-    if($db -> $($create_table)){
+    if($db -> query($create_table)){
 
-        $insert_data = "INSERT INTO dashboard(question, answer) VALUES ('', '$answer')";
+        $insert_data = "INSERT INTO dashboard(question, answer) VALUES ('$question', '$answer')";
+
+        if($db -> query($insert_data)){
+            echo "success";
+        }else{
+            echo "Unable to Store Data!";
+        }
 
     }else{
         echo "Unable to Create Table!";

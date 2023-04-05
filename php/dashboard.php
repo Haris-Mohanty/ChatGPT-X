@@ -3,8 +3,8 @@
 //DATABASE LINK
 require_once("../common/php/database.php");
 
-$question = $_POST['question'];
-$answer = $_POST['answer'];
+$question = addslashes($_POST['question']);
+$answer = addslashes($_POST['answer']);
 
 $get_data = "SELECT * FROM dashboard";
 

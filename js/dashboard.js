@@ -11,7 +11,11 @@ $(document).ready(function () {
       },
       beforeSend: function () {},
       success: function (response) {
-        if(response.trim() == "success")
+        if (response.trim() == "success") {
+          swal("Successful!", "Question Added Successfully!", "success");
+        } else {
+          swal(response.trim(), response.trim(), "error");
+        }
       },
     });
   });

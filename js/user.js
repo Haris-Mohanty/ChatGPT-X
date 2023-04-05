@@ -23,12 +23,9 @@ $(document).ready(function () {
           function animation() {
             char_index++;
             answer_el.innerHTML = array_text[0].slice(0, char_index) + " | ";
-            if(char_index == data[0].length){
-                clearTimeout(myTimeout);
-            }
             let myTimeout = setTimeout(function () {
               animation();
-            }, 30);
+            }, 35);
           }
         } else {
         }

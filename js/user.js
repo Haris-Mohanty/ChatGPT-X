@@ -10,7 +10,7 @@ $(document).ready(function () {
       },
       beforeSend: function () {},
       success: function (response) {
-        console.log(response.trim());
+        $(".answer")
       },
     });
   });

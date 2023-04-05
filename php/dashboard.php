@@ -11,6 +11,14 @@ $get_data = "SELECT * FROM dashboard";
 $response = $db -> query($get_data);
 
 if($response){
+    
+    $insert_data = "INSERT INTO dashboard(question, answer) VALUES ('$question', '$answer')";
+
+        if($db -> query($insert_data)){
+            echo "success";
+        }else{
+            echo "Unable to Store Data!";
+        }
 
 }else{
     $create_table = "CREATE TABLE dashboard(

@@ -6,12 +6,9 @@ $(document).ready(function () {
       type: "POST",
       url: "php/dashboard.php",
       data: {
-        question: $(".question").val().toLowerCase(),
-        answer: $(".answer").val(),
+        question: $("#question").val().toLowerCase(),
+        answer: $("#answer").val(),
       },
-      processData: false,
-      contentType: false,
-      cache: false,
       beforeSend: function () {},
       success: function (response) {
         alert(response);

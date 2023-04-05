@@ -8,7 +8,9 @@ $(document).ready(function () {
       data: {
         question: question,
       },
-      beforeSend: function () {},
+      beforeSend: function () {
+
+      },
       success: function (response) {
         $(".gpt-box").addClass("d-none");
         $(".answer-box").removeClass("d-none");
@@ -17,7 +19,7 @@ $(document).ready(function () {
         if(response.trim() != "Thank You!"){
 
             let data = JSON.parse(response.trim());
-            
+            let array_text = [data.answer];
         }else{
 
         }

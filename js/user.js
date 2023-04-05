@@ -8,20 +8,26 @@ $(document).ready(function () {
       data: {
         question: question,
       },
-      beforeSend: function () {
-
-      },
+      beforeSend: function () {},
       success: function (response) {
         $(".gpt-box").addClass("d-none");
         $(".answer-box").removeClass("d-none");
         $(".question").html(question);
         // $(".answer").html(response);
-        if(response.trim() != "Thank You!"){
-
-            let data = JSON.parse(response.trim());
-            let array_text = [data.answer];
-        }else{
-
+        if (response.trim() != "Thank You!") {
+          let answer_el = document.querySelector(".answer");
+          let data = JSON.parse(response.trim());
+          let array_text = [data.answer];
+          let char_index = 0;
+          animation();
+          function animation() {
+            char_index++;
+            answer_el.innerHTML = array_text[0].slice(0, char_index) + " | ";
+            setTimeout(function () {
+              animation();
+            }, 30);
+          }
+        } else {
         }
       },
     });

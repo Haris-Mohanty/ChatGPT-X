@@ -11,7 +11,7 @@ $(document).ready(function () {
       },
       beforeSend: function () {},
       success: function (response) {
-        alert(response);
+        if(response.trim() == "success")
       },
     });
   });

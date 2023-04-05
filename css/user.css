@@ -48,11 +48,15 @@ small{
     text-align: center;
     font-size: 12px;
 }
-.answer-box small{
-    padding: 7px;
+.answer-box .icon-area small{
+    padding: 9px;
     font-size: 21px;
     font-weight: bold;
     background-color: #E15CDF;
     color: #fff;
     border-radius: 10px;
+}
+.answer-box span{
+    font-size: 16px;
+    font-weight: bold;
 }

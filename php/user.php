@@ -11,7 +11,7 @@ $response = $db -> query($get_data);
 
 if($response -> num_rows != 0){
     $data = $response -> fetch_assoc();
-    echo $data;
+    echo json_encode($data);
 }else{
     echo "Thank You!";
 }

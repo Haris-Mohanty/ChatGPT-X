@@ -13,6 +13,14 @@ $(document).ready(function () {
         $(".gpt-box").addClass("d-none");
         $(".answer-box").removeClass("d-none");
         $(".question").html(question);
+        // $(".answer").html(response);
+        if(response.trim() != "Thank You!"){
+
+            let data = JSON.parse(response.trim());
+            
+        }else{
+
+        }
       },
     });
   });

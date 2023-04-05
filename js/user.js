@@ -10,7 +10,9 @@ $(document).ready(function () {
       },
       beforeSend: function () {},
       success: function (response) {
-        $(".answer").html(response);
+        $(".gpt-box").addClass("d-none");
+        $(".answer-box").removeClass("d-none");
+        $(".question").html(question);
       },
     });
   });
